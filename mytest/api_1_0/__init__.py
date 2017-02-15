@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 api_bp = Blueprint('api', __name__)
 
-class TestApi(Api):
+class MyApi(Api):
     pass
 
 class ShowPort(Resource):
@@ -19,5 +19,5 @@ class ShowPort(Resource):
         logger.info("PUT method trigged, will do nothing")
         return "Currently no handler for put method, nothing is done"
 
-api = TestApi(api_bp, catch_all_404s=True)
+api = MyApi(api_bp, catch_all_404s=True)
 api.add_resource(ShowPort, '/')

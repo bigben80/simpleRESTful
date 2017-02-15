@@ -2,7 +2,6 @@ from flask import Blueprint, Flask
 from .config import DebugConfig as debug_config
 from .config import config
 from .api_1_0 import api_bp
-from gevent.wsgi import WSGIServer
 
 import logging
 import os
@@ -35,6 +34,7 @@ def create_app():
     return app
 
 def run():
+    from gevent.wsgi import WSGIServer
     logger.info(">>>> starting app now >>>>")
 
     logger.info(">>>> configuration items loaded: >>>>")

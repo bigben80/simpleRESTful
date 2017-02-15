@@ -15,7 +15,7 @@ The folder tree looks like this:
     ├── mytest
     │   ├── api_1_0
     │   │   └── __init__.py // define the Blueprint api_bp here
-                            // define flask_restful Api class TestApi
+                            // define flask_restful Api class MyApi
                             // define flask_restful Resource class ShowPort
                             // add_resource and specify which URL will be handled by which resource
     │   ├── config.py       // provide the configuration settings, will be used by create_app() and other functions
